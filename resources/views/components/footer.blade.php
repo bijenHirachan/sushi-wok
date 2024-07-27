@@ -18,14 +18,17 @@
         <div class="flex flex-col items-center">
             <div class='flex gap-2 my-4'>
 
-                <a href=''>
-                    <i class="fa-brands fa-facebook"></i>
+                <a target="_blank" href="{{ (new \App\Settings\SocialSetting)?->facebook}}">
+                    <i class="transition-all delay-150 hover:scale-125 fa-brands fa-facebook"></i>
                 </a>
-                <a href=''>
-                    <i class="fa-brands fa-youtube"></i>
+                <a target="_blank" href="{{ (new \App\Settings\SocialSetting)?->youtube}}">
+                    <i class="transition-all delay-150 hover:scale-125 fa-brands fa-youtube"></i>
                 </a>
-                <a href=''>
-                    <i class="fa-brands fa-tiktok"></i>
+                <a target="_blank" href="{{ (new \App\Settings\SocialSetting)?->tiktok}}">
+                    <i class="transition-all delay-150 hover:scale-125 fa-brands fa-tiktok"></i>
+                </a>
+                <a target="_blank" href="{{ (new \App\Settings\SocialSetting)?->instagram}}">
+                    <i class="transition-all delay-150 hover:scale-125 fa-brands fa-instagram"></i>
                 </a>
 
             </div>

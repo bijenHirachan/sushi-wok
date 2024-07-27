@@ -14,7 +14,8 @@
                 <div class='justify-center align-middle md:flex lg:justify-start'>
                     <button
                         class='w-full px-6 py-5 mr-6 text-xl font-medium text-white bg-orange-400 rounded-full md:w-auto lg:px-14'>
-                        <a href='#cook-section'>Order Now!</a>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:0032483512695">Call Now!</a>
                     </button>
 
                 </div>

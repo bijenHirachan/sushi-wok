@@ -9,40 +9,18 @@
             </h3>
         </div>
 
-        <div class="flex flex-col sm:flex-row">
-            <div class='m-3 my-10 text-center'>
-                <div class="relative">
-                    <img src='/images/Expert/boyone.svg' alt="gaby" width={362} height={262}
-                        class="inline-block m-auto" />
-                    <div class="absolute top-[50%] right-[2%]">
-                        <img src='/images/Expert/Linkedin.svg' alt="linkedin" width={220} height={120} />
+        <div class="flex flex-col mt-8 sm:flex-row">
+            @foreach (App\Models\Staff::all() as $staff)
+                <div class='m-3 my-10 text-center'>
+                    <div class="w-64 h-64">
+                        <img src={{ asset('storage/' . $staff->image) }}
+                            class="object-cover w-full h-full rounded-full" />
                     </div>
+                    <h3 class='mt-4 text-2xl font-semibold text-lightblack'>{{ $staff->name }}</h3>
+                    <h4 class='pt-2 pb-2 text-lg font-normal uppercase opacity-50 text-lightblack'>{{ $staff->role }}
+                    </h4>
                 </div>
-                <h3 class='text-2xl font-semibold text-lightblack'>John Doe</h3>
-                <h4 class='pt-4 pb-2 text-lg font-normal opacity-50 text-lightblack'>Head Chef</h4>
-            </div>
-            <div class='m-3 my-10 text-center'>
-                <div class="relative">
-                    <img src='/images/Expert/boyone.svg' alt="gaby" width={362} height={262}
-                        class="inline-block m-auto" />
-                    <div class="absolute top-[50%] right-[2%]">
-                        <img src='/images/Expert/Linkedin.svg' alt="linkedin" width={220} height={120} />
-                    </div>
-                </div>
-                <h3 class='text-2xl font-semibold text-lightblack'>John Doe</h3>
-                <h4 class='pt-4 pb-2 text-lg font-normal opacity-50 text-lightblack'>Head Chef</h4>
-            </div>
-            <div class='m-3 my-10 text-center'>
-                <div class="relative">
-                    <img src='/images/Expert/boyone.svg' alt="gaby" width={362} height={262}
-                        class="inline-block m-auto" />
-                    <div class="absolute top-[50%] right-[2%]">
-                        <img src='/images/Expert/Linkedin.svg' alt="linkedin" width={220} height={120} />
-                    </div>
-                </div>
-                <h3 class='text-2xl font-semibold text-lightblack'>John Doe</h3>
-                <h4 class='pt-4 pb-2 text-lg font-normal opacity-50 text-lightblack'>Head Chef</h4>
-            </div>
+            @endforeach
         </div>
 
     </div>
