@@ -31,6 +31,8 @@ class CategoryResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->reorderable('sort')
+            ->modifyQueryUsing(fn(Builder $query) => $query->orderBy('sort'))
             ->columns([
                 Tables\Columns\TextColumn::make('name')
             ])

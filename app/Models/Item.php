@@ -14,7 +14,8 @@ class Item extends Model
         'name',
         'description',
         'price',
-        'image'
+        'image',
+        'sort'
     ];
 
     public function categories(): BelongsToMany

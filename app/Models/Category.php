@@ -12,6 +12,7 @@ class Category extends Model
 
     protected $fillable = [
         'name',
+        'sort'
     ];
 
     public function items(): BelongsToMany

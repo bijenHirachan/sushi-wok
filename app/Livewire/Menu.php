@@ -16,13 +16,13 @@ class Menu extends Component
 
     public function mount()
     {
-        $this->items = Item::all();
+        $this->items = Item::orderBy('sort')->get();
     }
 
     public function clearSelectedCategories()
     {
         $this->selectedCategories = [];
-        $this->items = Item::all();
+        $this->items = Item::orderBy('sort')->get();
     }
 
     public function selectCategory($id)
@@ -35,18 +35,18 @@ class Menu extends Component
         }
 
         if(count($this->selectedCategories) < 1){
-            $this->items = Item::all();
+            $this->items = Item::orderBy('sort')->get();
         }else{
             $this->items = Item::whereHas('categories', function (Builder $query){
                 $query->whereIn('id', $this->selectedCategories);
-            })->get();
+            })->orderBy('sort')->get();
         }
     }
 
     public function render()
     {
         return view('livewire.menu', [
-            'categories' => Category::all()
+            'categories' => Category::orderBy('sort')->get()
         ]);
     }
 }
