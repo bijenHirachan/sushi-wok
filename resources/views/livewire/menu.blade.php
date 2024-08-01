@@ -15,14 +15,14 @@
     </div>
     <div class='grid mt-16 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-5'>
         @foreach ($items as $item)
-            <div class='relative shadow-lg h-[356px] bg-pink-100/20 rounded-3xl'>
+            <div class='relative shadow-lg h-[150px] sm:h-[356px] bg-pink-100/20 rounded-3xl'>
                 <img src="{{ asset('storage/' . $item->image) }}" class="object-cover w-full h-full rounded-3xl" />
 
                 <div
-                    class="absolute bottom-0 flex flex-col items-center justify-center w-full p-4 tracking-wide text-white bg-slate-900/50 rounded-b-3xl">
-                    <h3 class="text-xl font-semibold">{{ $item->name }}</h3>
-                    <p class="text-sm">{{ $item->description }}</p>
-                    <h3 class="mt-2 text-2xl">€ {{ $item->price }}</h3>
+                    class="absolute bottom-0 flex flex-col items-center justify-center w-full p-2 tracking-wide text-white sm:p-4 bg-slate-900/50 rounded-b-3xl">
+                    <h3 class="text-sm font-semibold sm:text-xl">{{ $item->name }}</h3>
+                    <p class="text-xs sm:text-sm">{{ $item->description }}</p>
+                    <h3 class="mt-2 text-sm sm:text-2xl">€ {{ $item->price }}</h3>
                 </div>
             </div>
         @endforeach
