@@ -13,7 +13,7 @@
 
                 <div class='justify-center align-middle md:flex lg:justify-start'>
                     <button
-                        class='w-full px-6 py-5 mr-6 text-xl font-medium text-white bg-orange-400 rounded-full md:w-auto lg:px-14'>
+                        class='w-full px-6 py-5 mr-6 text-xl font-medium text-white transition-colors delay-75 rounded-full bg-rose-400 md:w-auto lg:px-14 hover:bg-rose-500'>
                         <i class="fa-solid fa-phone"></i>
                         <a href="tel:0032483512695">Call Now!</a>
                     </button>
