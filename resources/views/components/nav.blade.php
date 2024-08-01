@@ -53,9 +53,30 @@
     </div>
 
 
-    <div class="w-full max-w-xl mx-auto rounded-md lg:hidden translate-y-[-312px]"
+    {{-- <div class="w-full max-w-xl mx-auto rounded-md lg:hidden translate-y-[-312px]"
+        x-bind:class="{ 'transform transition duration-500 ease-in-out  translate-y-0': show }">
+        <div class="flex py-1 space-y-4">
+            <div class="w-full bg-white shadow sm:block">
+                <div class="px-5 pt-2 pb-3 space-y-1">
+                    <a @click="show = false" href="#gallery"
+                        class="block p-2 text-base font-medium text-black rounded-md hover:bg-rose-100 hover:text-purple">
+                        Specials
+                    </a>
+                    <a @click="show = false" href="#expert"
+                        class="block p-2 text-base font-medium text-black rounded-md hover:bg-rose-100 hover:text-purple">
+                        Experts
+                    </a>
+                    <a @click="show = false" href="#menu"
+                        class="block p-2 text-base font-medium text-black rounded-md hover:bg-rose-100 hover:text-purple">
+                        Menu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+    <div class="w-full max-w-xl mx-auto transition-opacity duration-500 delay-75 rounded-md opacity-0 lg:hidden"
         x-bind:class="{
-            'transition duration-500 delay-75 ease-in-out transform translate-y-0 ': show
+            'opacity-100': show
         }">
         <div class="flex py-1 space-y-4">
             <div class="w-full bg-white shadow sm:block">
@@ -76,6 +97,5 @@
             </div>
         </div>
     </div>
-
 
 </div>

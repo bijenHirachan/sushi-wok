@@ -1,12 +1,12 @@
 <div>
     <div class="flex justify-center gap-2 mt-4">
         <span wire:click="clearSelectedCategories"
-            class="inline-flex cursor-pointer items-center px-2 py-1 text-xs font-medium text-gray-600 rounded-md {{ count($selectedCategories) ? 'bg-gray-50' : 'bg-rose-100 ' }} ring-1 ring-inset ring-gray-500/10">
+            class="inline-flex cursor-pointer items-center px-2 py-1 text-xs font-medium text-gray-600 rounded-md {{ count($selectedCategories) ? 'bg-gray-50' : 'bg-pink-100 ' }} ring-1 ring-inset ring-gray-500/10">
             All
         </span>
         @foreach ($categories as $category)
             <span wire:click="selectCategory({{ $category->id }})"
-                class="inline-flex cursor-pointer items-center px-2 py-1 text-xs font-medium text-gray-600 rounded-md {{ in_array($category->id, $selectedCategories) ? 'bg-rose-100 ' : 'bg-gray-50' }} ring-1 ring-inset ring-gray-500/10">
+                class="inline-flex cursor-pointer items-center px-2 py-1 text-xs font-medium text-gray-600 rounded-md {{ in_array($category->id, $selectedCategories) ? 'bg-pink-100 ' : 'bg-gray-50' }} ring-1 ring-inset ring-gray-500/10">
                 {{ $category->name }}
             </span>
         @endforeach
