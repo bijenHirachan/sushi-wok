@@ -9,10 +9,11 @@
             </h3>
         </div>
 
-        <div class="flex flex-col mt-8 sm:flex-row">
+        <div class="grid grid-cols-12 mt-8 sm:flex-row">
             @foreach (App\Models\Staff::all() as $staff)
-                <div class='m-3 my-10 text-center'>
-                    <div class="w-64 h-64">
+                <div
+                    class='flex flex-col items-center justify-center col-span-12 m-3 my-10 text-center sm:col-span-6 lg:col-span-4 xl:col-span-3'>
+                    <div class="w-48 h-48">
                         <img src={{ asset('storage/' . $staff->image) }}
                             class="object-cover w-full h-full rounded-full" />
                     </div>
